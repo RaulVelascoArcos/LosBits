@@ -25,15 +25,20 @@
 
 .icon-estrella:before {
 	content: "\f02a";
+	color: #FFBE2C;
+	margin-right: 0.3em;
+ 
 }
 .icon-f-negativa:before {
 	content: "\f05b";
+	color: #DD4F24;
 }
 .icon-f-positiva:before {
 	content: "\f0aa";
 }
 .icon-pluma:before {
 	content: "\e906";
+	margin-right: 0.3em;
 }
 
 
@@ -46,6 +51,9 @@
 a{
 	color: #22BCE0;
 }
+aside{
+	display: none;
+}
 body{
 	background: #EEEEEE;
 	font-family: "Open Sans ";
@@ -57,6 +65,7 @@ footer{
 	text-align: center;
 	padding: 1em;
 }
+
 footer p:first-child{
 	margin-bottom: 0;
 }
@@ -94,15 +103,23 @@ header #avatar img{
 	border-radius: 50%;
 	width: 75px;
 }
-header #logo img {
+header #logo{
 	border-right: 1px solid white;
+	margin-right: 0.5em;
+}
+header #logo img {
 	margin-right: 0.5em;
 	padding-right: 0.5em;
 	width: 75px;
+	-webkit-transition:0.5s;
+}
+header #logo img:hover{
+	-webkit-transform:rotate(360deg);
+
 }
 nav{
 	background: #80BCA3;
-	padding:0 0.5em;
+	padding:0 6em 0 0.5em;
 	position: relative;
 }
 nav ul #publicar_nav{
@@ -119,6 +136,12 @@ nav ul #publicar_nav a{
 	text-decoration: none;
 	text-shadow:rgba(0,0,0,0.5) 2px 2px 5px;
 }
+nav ul #publicar_nav a:hover:before{
+	-webkit-transforma: scale(1.2);
+}
+nav ul li a:hover{
+	background: #343B54;
+}
 nav ul {
 	list-style: none;
 	margin: 0;
@@ -131,7 +154,9 @@ nav ul li{
 nav ul li a {
 	color: white;
 	display: block;
-	padding: 0.5em 0;
+	text-decoration: none;
+	padding: 0.5em ;
+	-webkit-transition:.3s;
 }
 #contenido{
 	margin: 1em;
@@ -170,10 +195,14 @@ nav ul li a {
 #contenido .item .imagen_item img{
 	width: 128px;
 }
+#contenido .item .contenido{
+	 font-size: 1em;
+	 padding-top:0;
+}
 #contenido .item .titulo_item{
 	 font-size: 1.2em;
 	 font-style: italic;
-	 padding: 1em 1em 0 0;
+	 padding: 0 1em 0 0;
 }
 #contenido .item .titulo_item a{
 	 color:#444;
@@ -199,5 +228,55 @@ nav ul li a {
 }
 
 
+@media screen and (min-width:800px){
+	#contenido{
+		overflow: hidden;
+	}
+	#contenido .item{
+		width: 49%;
+		float: left;	
+	}
+	#contenido .item:nth-child(odd){
+		margin-right: 2%;
+	}
+}
+
+@media screen and (min-width:1000px){
+	aside{
+		display: block;
+		float: right;
+		margin: 1em;
+		width: 20%;
+	}
+	aside #contenido{ 
+		width: 100%;
+	}
+}
+
+
+
+
+
+
+/*Formulario*/
+.formulario{
+	padding: 1em;
+	text-align: right;
+	display: none;
+}
+.formulario input{
+	border: 1px solid #ccc;
+	border-radius: .5em;
+	padding: 0.2em 0.6em; 
+}
+.formulario input[type="submit"]{
+	background: #22BCE0;
+	border-color: #22BCE0;
+	box-shadow:rgba(0,0,0,0.5) 3px 3px 9px;
+	color: white;
+	font-style: italic;
+	text-decoration: none;
+	text-shadow:rgba(0,0,0,0.5) 2px 2px 5px;
+}
 
 
