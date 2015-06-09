@@ -6,14 +6,16 @@ var $form = $('#formulario'),
 	$list = $('#contenido'),
 	$post = $('.item').first();
 // Validacion
-if(localStorage.getItem('autosave')){
+if (localStorage.getItem('autosave')) {
 	$titulo.val(sessionStorage.getItem('titulo'));
 	$url.val(sessionStorage.getItem('url'));
-} 
- var id = setInterval(function(){
- 	sessionStorage.setItem('titulo', $titulo.val());
- 	sessionStorage.setItem('url', $url.val());
- },1000);
+}
+
+var id = setInterval(function(){
+	sessionStorage.setItem('titulo', $titulo.val());
+	sessionStorage.setItem('url', $url.val());
+},1000);
+
 // Fin de la validacion para el formulario
 // Decrarcion de funciones
 function mostrarFormulario(){
@@ -41,5 +43,5 @@ function agregarPost(){
 }
 
 //Eventos
-$button.click( mostrarFormulario);
-$form.on('submit', agregarPost);
+$('#publicar_nav a').click(mostrarFormulario);
+$('#formulario').on('submit', agregarPost);
