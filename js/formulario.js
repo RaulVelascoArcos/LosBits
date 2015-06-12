@@ -14,7 +14,7 @@ if (localStorage.getItem('autosave')) {
 var id = setInterval(function(){
 	sessionStorage.setItem('titulo', $titulo.val());
 	sessionStorage.setItem('url', $url.val());
-},10000);
+},1000);
 
 // Fin de la validacion para el formulario
 // Decrarcion de funciones
