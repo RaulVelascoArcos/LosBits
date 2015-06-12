@@ -259,17 +259,17 @@ nav ul li a {
 
 
 /*Formulario*/
-.formulario{
+.formulario-es{
 	padding: 1em;
 	text-align: right;
 	display: none;
 }
-.formulario input{
+.formulario-es input{
 	border: 1px solid #ccc;
 	border-radius: .5em;
 	padding: 0.2em 0.6em; 
 }
-.formulario input[type="submit"]{
+.formulario-es input[type="submit"]{
 	background: #22BCE0;
 	border-color: #22BCE0;
 	box-shadow:rgba(0,0,0,0.5) 3px 3px 9px;
